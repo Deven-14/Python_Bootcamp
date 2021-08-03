@@ -1,5 +1,5 @@
 def input_2_numbers():
-    numbers = list(map(int, input("Enter 2 numbers: ").strip().split()))
+    numbers = [int(num) for num in input("Enter 2 numbers: ").strip().split()]
     return numbers[:2]
 
 def output_total(num1, num2, total):
