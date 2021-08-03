@@ -1,0 +1,17 @@
+“By the way, the language is named after the BBC show “Monty Python’s Flying Circus” and has nothing to do with reptiles”. 
+								~ python.org
+
+Type your answer for each question here:
+
+An Interpreted language is a programming language that is interpreted i.e., it translates just one statement of the program at a time into machine code that is understood by the computer’s processor
+
+2.)
+Interpreter
+Compiler
+It translates just one statement of the program at a time into machine code
+It scans the entire program and translates the whole of it into machine code at once
+Takes very less time to analyze the source code. However, the overall time to execute the program is much slower
+Takes a lot of time to analyze the source code. However, the overall time to execute the program is much faster
+
+
+3.)Python interpreter is written in C Language.

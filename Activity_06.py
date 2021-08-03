@@ -6,8 +6,8 @@ def main():
     numbers = input_5_numbers()
     sliced_list = numbers[0:3]
     print("Sliced list: ", sliced_list)
-    numbers[0] = numbers[4] = 0
-    sliced_list[0] = sliced_list[2] = 0
+    numbers[0] = numbers[-1] = 0
+    sliced_list[0] = sliced_list[-1] = 0
     print("Replaced list1: ", numbers)
     print("Replaced list2: ", sliced_list)
 
