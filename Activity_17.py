@@ -1,6 +1,6 @@
 
 def input_list_of_tuples():
-    n = int(input("Enter the number of sentenses to be entered : "))
+    n = int(input("Enter the number of tuple of strings to be entered: "))
     list_of_tuple_of_strings = []
     
     for _ in range(n):
