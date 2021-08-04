@@ -1,3 +1,4 @@
+from math import sqrt, ceil
 
 def input_number():
 
@@ -10,7 +11,7 @@ def is_prime(num):
     if(num <= 1):
         return False
     
-    for x in range(2, num // 2 + 1):
+    for x in range(2, ceil(sqrt(num))):
         if num % x == 0:
             return False
     
