@@ -11,7 +11,7 @@ if __name__ == "__main__":
     
     
     
-    
+#dict_of_strings = {x:y for x, y in [ele.split('=') for ele in string.split(';')]} creating list is redundant here    
     
 #dict_of_strings = dict([(*ele.split('='), ) for ele in string.split(';')]) WORKS
 
