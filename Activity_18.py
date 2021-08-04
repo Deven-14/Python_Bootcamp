@@ -8,6 +8,11 @@ if __name__ == "__main__":
     dict_of_strings = {x:y for x, y in [ele.split('=') for ele in string.split(';')]}
     print(dict_of_strings)
 
+    
+    
+    
+    
+    
 #dict_of_strings = dict([(*ele.split('='), ) for ele in string.split(';')]) WORKS
 
 #dict_of_strings = {ele.split('=')[0]: ele.split('=')[1] for ele in string.split(';')} works but i think it's bad
