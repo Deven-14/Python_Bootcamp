@@ -17,8 +17,7 @@ def output_volume(length, breadth, height, volume):
           f" and height = {height:.3f} is = {volume:.3f}")
 
 def get_sphere_radius_given_volume(volume):
-    temp = 3 * volume / 4 * math.pi
-    return (temp ** (1/3))
+    return ((3 * volume / 4 * math.pi) ** (1/3))
 
 def output_sphere_raduis(radius):
     print(f"The radius of the sphere is = {radius:.3f}")
