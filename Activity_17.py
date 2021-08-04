@@ -9,7 +9,10 @@ def input_list_of_tuples():
         
     return list_of_tuple_of_strings
 
+def list_of_tuples_to_concatinated_string(list_of_tuples):
+    return ';'.join(['='.join(ele) for ele in list_of_tuples])
+
 if __name__ == "__main__":
     list_of_tuple_of_strings = input_list_of_tuples()
-    joined_string = ';'.join(['='.join(ele) for ele in list_of_tuple_of_strings])
-    print(joined_string)
+    concatinated_string = list_of_tuples_to_concatinated_string(list_of_tuple_of_strings)
+    print(concatinated_string)
