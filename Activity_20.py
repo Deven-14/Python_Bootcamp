@@ -3,8 +3,8 @@ def input_dictionary():
     n = int(input("Enter the number of key, value pairs to be entered: "))
     dict_ = {}
     for _ in range(n):
-        key, value = input("Enter 2 space spearated numbers: ").strip().split()
-        dict_[int(key)] = int(value)
+        key, value = input("Enter a key and a value: ").split()
+        dict_[key] = value
     return dict_
 
 if __name__ == "__main__":

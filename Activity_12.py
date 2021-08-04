@@ -1,5 +1,5 @@
 def input_3_numbers():
-    numbers = [float(num) for num in input("Enter 3 numbers: ").strip().split()]
+    numbers = [float(num) for num in input("Enter 3 numbers: ").split()]
     return numbers[:3]
 
 def max_of_three_numbers(num1, num2, num3):

@@ -1,6 +1,6 @@
 
 def input_sentense():
-    list_of_strings = [string for string in input("Enter a Sentense: ").strip().split()]
+    list_of_strings = [string for string in input("Enter a Sentense: ").split()]
     return list_of_strings
 
 if __name__ == "__main__":

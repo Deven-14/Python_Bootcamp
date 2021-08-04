@@ -1,5 +1,5 @@
 def input_2_numbers():
-    numbers = [int(num) for num in input("Enter 2 numbers: ").strip().split()]
+    numbers = [int(num) for num in input("Enter 2 numbers: ").split()]
     return numbers[:2]
 
 def add(num1, num2):
