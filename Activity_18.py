@@ -5,7 +5,7 @@ def input_string():
 
 if __name__ == "__main__":
     string = input_string()
-    dict_of_strings = {x:y for x, y in [ele.split('=') for ele in string.split(';')]}
+    dict_of_strings = {x:y for x, y in (ele.split('=') for ele in string.split(';'))}
     print(dict_of_strings)
 
     
