@@ -31,14 +31,11 @@ def get_sphere_radius_given_volume(volume):
 def output_sphere_raduis(radius):
     print(f"The radius of the sphere is = {radius:.3f}")
 
-def main():
+if __name__ == "__main__":
     t = Tromboloid()
     t.input_lenght_breadth_height()
     t.calculate_volume()
     t.output_volume()
     radius = get_sphere_radius_given_volume(t.volume)
     output_sphere_raduis(radius)
-
-if __name__ == "__main__":
-    main()
     

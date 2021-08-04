@@ -7,14 +7,15 @@ def input_dictionary():
         dict_[int(key)] = int(value)
     return dict_
 
-def main():
+if __name__ == "__main__":
     dict_ = input_dictionary()
     print("dictionary: ", dict_)
     sorted_dict = dict(sorted(dict_.items()))
-    #sorted_dict = {*sorted(dict_.items()), } becomes a set
-    #sorted_dict = {k: v for k, v in sorted(dict_.items())} becomes a dict
-    #so simply pass sorted() to dict() as sorted returns a LIST always, here it'll return a list of tuples
     print("Sorted dictionary: ", sorted_dict)
 
-if __name__ == "__main__":
-    main()
+#sorted_dict = {k: v for k, v in sorted(dict_.items())} becomes a dict
+
+#sorted_dict = {*sorted(dict_.items()), } becomes a set
+
+#so simply pass sorted() to dict() as sorted returns a LIST always, here it'll return a list of tuples
+    

@@ -9,10 +9,7 @@ def input_list_of_tuples():
         
     return list_of_tuple_of_strings
 
-def main():
+if __name__ == "__main__":
     list_of_tuple_of_strings = input_list_of_tuples()
     joined_string = ';'.join(['='.join(ele) for ele in list_of_tuple_of_strings])
     print(joined_string)
-
-if __name__ == "__main__":
-    main()

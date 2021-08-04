@@ -5,10 +5,7 @@ def input_5_numbers():
 def output_total(total):
     print("The sum of all the numbers is = ", total)
 
-def main():
+if __name__ == "__main__":
     numbers = input_5_numbers()
     total = sum(numbers)
     output_total(total)
-
-if __name__ == "__main__":
-    main()

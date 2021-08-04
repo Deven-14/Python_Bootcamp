@@ -24,11 +24,7 @@ def output(num, is_num_prime):
     else:
         print(f"{num} is not prime")
 
-
-def main():
+if __name__ == "__main__":
     num = input_number()
     is_num_prime = is_prime(num)
     output(num, is_num_prime)
-
-if __name__ == "__main__":
-    main()

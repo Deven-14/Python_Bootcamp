@@ -7,11 +7,10 @@ def input_dictionary():
         dict_[int(key)] = int(value)
     return dict_
 
-def main():
+if __name__ == "__main__":
     dict_ = input_dictionary()
     print("dictionary: ", dict_)
     sorted_dict = dict(sorted(dict_.items(), key=lambda kv: kv[1]))
     print("Sorted dictionary: ", sorted_dict)
 
-if __name__ == "__main__":
-    main()
+#sorted_dict = {k: v for k,v in sorted(dict_.items(), key=lambda kv: kv[1]}
