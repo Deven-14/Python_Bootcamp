@@ -3,7 +3,7 @@ def input_dictionary():
     n = int(input("Enter the number of key, value pairs to be entered: "))
     dict_ = {}
     for _ in range(n):
-        key, value = input("Enter a key and a value: ").strip().split()
+        key, value = input("Enter a key and a value: ").split()
         dict_[key] = value
     return dict_
 
