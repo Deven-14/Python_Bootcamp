@@ -4,8 +4,8 @@ def input_list_of_tuples():
     list_of_tuple_of_strings = []
     
     for _ in range(n):
-        strings = input("Enter 2 space separated strings: ").split()
-        list_of_tuple_of_strings.append((*strings, ))
+        string1, string2 = input("Enter 2 space separated strings: ").split()
+        list_of_tuple_of_strings.append((string1, string2))
         
     return list_of_tuple_of_strings
 
