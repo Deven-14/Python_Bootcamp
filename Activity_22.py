@@ -7,8 +7,18 @@ def input_angle():
 def degree_to_radian(angle):
     return angle * pi / 180
 
+#def get_next_fact(start, stop, step):
+#    fact, num1, num2 = 1, 1, 1
+#    for ele in range(start, stop, step):
+#        yield fact
+#        fact *= (ele+1)*(ele+2)        
+
 def sin(x):
-    return (x - (x ** 3 / 6) + (x ** 5 / 120) - (x ** 7 / 5040))
+    num = 1
+    fact = (num := num*(i+1)*(i+2) for i in range(1, 16, 2))
+    elements = [x] + [x ** i / next(fact) for i in range(3, 16, 2)]
+    value = sum(elements[::2]) - sum(elements[1::2])
+    return value
 
 def output(x, sin_x):
     print(f"sin({x}) = {sin_x}")

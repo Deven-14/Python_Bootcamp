@@ -1,28 +1,16 @@
+from itertools import combinations_with_replacement as cwr
+
 def get_num_str():
     num_str = input("Enter a series of numbers: ").strip()
     return num_str
 
 def create_string_comb(comb):
     string_comb = []
-    
-    while(True):
-        string_comb.append("".join([str1[0] for str1 in comb]))
-        j = len(comb) - 1
-        while(j >= 0 and len(comb[j]) == 1):
-            j -= 1
-            
-        if(j == -1):
-            break
 
-        del comb[j][0]
-        i, j = 0, j+1
-        while(i < len(comb[j-1])):
-            del comb[j][0]
-            if not comb[j]:
-                del comb[j]
-            else:
-                j += 1
-            i += 1
+    temp_comb = []
+    for ele in comb:
+        len_ = len(ele)
+        temp_comb.append([])
                 
     return string_comb
 
@@ -33,26 +21,28 @@ def get_combination(num_str):
     comb = [[] for _ in range(len(num_str))]
     len_num_str = len(num_str)
     i = 0
-    
-    while(i < len_num_str):
-        
-        if(num_str[i] not in keypad):
-            i += 1
-            continue
 
-        node = comb[i]
-        node.append(keypad[num_str[i]][0])
-        
-        j, k = i+1, 1
-        while(j < len_num_str and num_str[j] == num_str[i]):
-            node.append(keypad[num_str[i]][k])
-            j, k = j+1, ((k+1) % len(keypad[num_str[i]]))
-        i += 1
+    comb_len = []
+    prev_ele = ["", 0]
+    for i, ele in enumerate(num_str):
+        if prev_ele[0] == ele:
+            prev_ele[1] += 1
+        else:
+            prev_ele = [ele, 1]
+            comb_len.append(prev_ele)
 
-    temp_comb = [ele for ele in comb if len(ele) != 0]
-    string_comb = create_string_comb(temp_comb)
+    print(comb_len)
+
+    temp_comb = []
+    for ele in comb_len:
+        temp = []
+        for i in range(ele[1]):
+            temp.append(["".join(t) for t in cwr(keypad[ele[0]][:ele[1]], ele[1]-i)])
+        temp_comb.append(temp)
+
+    print(temp_comb)
     
-    return string_comb
+    return comb_len
 
 
 def output(combinations):
