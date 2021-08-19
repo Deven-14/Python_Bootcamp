@@ -6,7 +6,7 @@ def get_num_str():
 def get_combination(num_str):
     keypad = {'2': "ABC", '3': "DEF", '4': "GHI", '5': "JKL", '6': "MNO",
               '7': "PQRS", '8': "TUV", '9': "WXYZ"}
-    rank = {char: index+1 for key in keypad for index, char in enumerate(keypad[key])}
+    rank = {char: index+1 for ele in keypad.values() for index, char in enumerate(ele)}
     
     num_group = [(key, len(list(grp))) for key, grp in groupby(num_str)]
     str_group = []
