@@ -6,15 +6,15 @@ def get_num_str():
 def get_combination(num_str):
     keypad = {'2': "ABC", '3': "DEF", '4': "GHI", '5': "JKL", '6': "MNO",
               '7': "PQRS", '8': "TUV", '9': "WXYZ"}
-    rank = {char: index+1 for ele in keypad.values() for index, char in enumerate(ele)}
+    n_tms_btn_prsd = {char: index+1 for ele in keypad.values() for index, char in enumerate(ele)}
     
     num_group = [(key, len(list(grp))) for key, grp in groupby(num_str)]
     str_group = []
     
-    for ele, length in num_group:
+    for ele, freq in num_group:
         temp = []
-        for i in range(1, length+1):
-            temp += [x for x in cwr(keypad[ele], i) if sum(rank[j] for j in x) == length]
+        for i in range(1, freq+1):
+            temp += [x for x in cwr(keypad[ele], i) if sum(n_tms_btn_prsd[char] for char in x) == freq]
         str_group.append([''.join(j) for j in temp])
 
     comb = [''.join(x) for x in product(*str_group)]
